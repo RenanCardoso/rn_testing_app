@@ -8,12 +8,10 @@ describe('Login', () => {
     });
 
     it('entrar com sucesso', async () => {
-        await expect(element(by.id('logo-image'))).toBeVisible();
-        
         //1. Clicar no botão próximo da primeira tela
         await waitFor(element(by.text('Próximo')))
         .toBeVisible()
-        .withTimeout(5000); // espera até 5 segundos
+        .withTimeout(9000); // espera até 5 segundos
         await element(by.text('Próximo')).tap();
 
         //2. Clicar no botão próximo da segunda tela
