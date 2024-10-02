@@ -40,15 +40,15 @@ const LoginScreen: React.FC = () => {
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!inputs.email.trim()) {
-      newErrors.email = "Please enter your email";
+      newErrors.email = "Por favor insira seu e-mail";
     } else if (!emailRegex.test(inputs.email.trim())) {
-      newErrors.email = "Please enter a valid email";
+      newErrors.email = "Por favor insira um e-mail válido";
     } else {
       newErrors.email = null;
     }
 
     if (!inputs.password.trim()) {
-      newErrors.password = "Enter your password";
+      newErrors.password = "Digite sua senha";
     } else {
       newErrors.password = null;
     }
@@ -77,7 +77,7 @@ const LoginScreen: React.FC = () => {
           value={inputs.email}
           onChangeText={(text) => handleOnChange(text, "email")}
           onFocus={() => handleError(null, "email")}
-          placeholder="Email"
+          placeholder="E-mail"
           placeholderTextColor="#FFF"
           error={errors.email}
         />
@@ -85,20 +85,20 @@ const LoginScreen: React.FC = () => {
           value={inputs.password}
           onChangeText={(text) => handleOnChange(text, "password")}
           onFocus={() => handleError(null, "password")}
-          placeholder="Password"
+          placeholder="Senha"
           placeholderTextColor="#FFF"
           error={errors.password}
           secureTextEntry
         />
         <CustomButton
-          title="Login"
+          title="Entrar"
           testID="Login"
           loading={loading}
           onPress={loginHandler}
         />
       </View>
       <FooterTextTouchable
-        text="Don't have an account? Sign Up"
+        text="Não tem uma conta? Inscreva-se"
         onPress={() => navigate("RegisterScreen")}
       />
     </CustomSafeAreaViewScroll>

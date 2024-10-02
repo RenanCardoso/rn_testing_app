@@ -42,28 +42,28 @@ const RegisterScreen: React.FC = () => {
     const newErrors: InputErrors = {};
 
     if (!inputs.first_name.trim()) {
-      newErrors.first_name = "Please enter your first name";
+      newErrors.first_name = "Por favor insira seu primeiro nome";
     } else {
       newErrors.first_name = null;
     }
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!inputs.email.trim()) {
-      newErrors.email = "Please enter your email";
+      newErrors.email = "Por favor insira seu e-mail";
     } else if (!emailRegex.test(inputs.email.trim())) {
-      newErrors.email = "Please enter a valid email";
+      newErrors.email = "Por favor insira um e-mail válido";
     } else {
       newErrors.email = null;
     }
 
     if (!inputs.last_name.trim()) {
-      newErrors.last_name = "Enter your last name";
+      newErrors.last_name = "Digite seu sobrenome";
     } else {
       newErrors.last_name = null;
     }
 
     if (!inputs.password.trim()) {
-      newErrors.password = "Enter your password";
+      newErrors.password = "Digite sua senha";
     } else {
       newErrors.password = null;
     }
@@ -83,13 +83,13 @@ const RegisterScreen: React.FC = () => {
 
   return (
     <CustomSafeAreaViewScroll>
-      <CustomHeading title="Sign Up" />
+      <CustomHeading title="Inscrever-se" />
       <View style={styles.inputContainer}>
         <Input
           value={inputs.first_name}
           onChangeText={(text) => handleOnChange(text, "first_name")}
           onFocus={() => handleError(null, "first_name")}
-          placeholder="First name"
+          placeholder="Primeiro nome"
           placeholderTextColor="#FFF"
           error={errors.first_name}
         />
@@ -97,7 +97,7 @@ const RegisterScreen: React.FC = () => {
           value={inputs.last_name}
           onChangeText={(text) => handleOnChange(text, "last_name")}
           onFocus={() => handleError(null, "last_name")}
-          placeholder="Last name"
+          placeholder="Último nome"
           placeholderTextColor="#FFF"
           error={errors.last_name}
         />
@@ -105,7 +105,7 @@ const RegisterScreen: React.FC = () => {
           value={inputs.email}
           onChangeText={(text) => handleOnChange(text, "email")}
           onFocus={() => handleError(null, "email")}
-          placeholder="Email"
+          placeholder="E-mail"
           placeholderTextColor="#FFF"
           error={errors.email}
         />
@@ -113,15 +113,15 @@ const RegisterScreen: React.FC = () => {
           value={inputs.password}
           onChangeText={(text) => handleOnChange(text, "password")}
           onFocus={() => handleError(null, "password")}
-          placeholder="Password"
+          placeholder="Senha"
           placeholderTextColor="#FFF"
           error={errors.password}
           secureTextEntry
         />
-        <CustomButton title="Sign Up" testID="Register" onPress={SignUpHandler} />
+        <CustomButton title="Inscrever-se" testID="Register" onPress={SignUpHandler} />
       </View>
       <FooterTextTouchable
-        text="Already have an account? Login In"
+        text="Já tem uma conta? Entrar"
         onPress={() => navigate("LoginScreen")}
       />
     </CustomSafeAreaViewScroll>

@@ -37,32 +37,32 @@ const OnBoardingScreen: FC = () => {
       <View style={styles.slide}>
         <OnboardItem
           imageSource={require("../assets/images/onboard1.png")}
-          title="Grab all events now only in your hands"
-          subtitle="Easy to find nearby events based on your interests."
+          title="Pegue todos os eventos agora com suas próprias mãos"
+          subtitle="Fácil de encontrar eventos próximos com base em seus interesses."
           onPressFirst={goToNextSlide}
-          buttonTitleFirst="Next"
+          buttonTitleFirst="Próximo"
         />
       </View>
 
       <View style={styles.slide}>
         <OnboardItem
           imageSource={require("../assets/images/onboard2.png")}
-          title="Easy payment & fast event ticket"
-          subtitle="Get amazing offers and discounts on your event tickets."
+          title="Pagamento fácil e ingresso rápido para eventos"
+          subtitle="Obtenha ofertas e descontos incríveis em seus ingressos para eventos."
           onPressFirst={goToNextSlide}
-          buttonTitleFirst="Next"
+          buttonTitleFirst="Próximo"
         />
       </View>
 
       <View style={styles.slide}>
         <OnboardItem
           imageSource={require("../assets/images/onboard3.png")}
-          title="Let's go to your favourite event now"
-          subtitle="Create your account and explore the community of events & organizers."
+          title="Vamos para o seu evento favorito agora"
+          subtitle="Crie sua conta e explore a comunidade de eventos e organizadores."
           onPressFirst={() => navigation("LoginScreen")}
           onPressSecond={() => navigation("RegisterScreen")}
-          buttonTitleFirst="Login"
-          buttonTitleSecond="Sign up"
+          buttonTitleFirst="Entrar"
+          buttonTitleSecond="Inscrever-se"
         />
       </View>
     </Swiper>
