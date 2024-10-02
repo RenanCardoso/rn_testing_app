@@ -90,6 +90,7 @@ const RegisterScreen: React.FC = () => {
           onChangeText={(text) => handleOnChange(text, "first_name")}
           onFocus={() => handleError(null, "first_name")}
           placeholder="First name"
+          placeholderTextColor="#FFF"
           error={errors.first_name}
         />
         <Input
@@ -97,6 +98,7 @@ const RegisterScreen: React.FC = () => {
           onChangeText={(text) => handleOnChange(text, "last_name")}
           onFocus={() => handleError(null, "last_name")}
           placeholder="Last name"
+          placeholderTextColor="#FFF"
           error={errors.last_name}
         />
         <Input
@@ -104,6 +106,7 @@ const RegisterScreen: React.FC = () => {
           onChangeText={(text) => handleOnChange(text, "email")}
           onFocus={() => handleError(null, "email")}
           placeholder="Email"
+          placeholderTextColor="#FFF"
           error={errors.email}
         />
         <Input
@@ -111,6 +114,7 @@ const RegisterScreen: React.FC = () => {
           onChangeText={(text) => handleOnChange(text, "password")}
           onFocus={() => handleError(null, "password")}
           placeholder="Password"
+          placeholderTextColor="#FFF"
           error={errors.password}
           secureTextEntry
         />
