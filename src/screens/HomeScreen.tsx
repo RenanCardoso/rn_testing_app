@@ -6,7 +6,7 @@ import { Colors } from '../utils/Colors'
 const HomeScreen: FC = () => {
   return (
     <CustomSafeAreaScrollView>
-      <Text style={{color: 'white'}}>Testing Complete</Text>
+      <Text style={{color: 'white'}}>Teste Completo!</Text>
     </CustomSafeAreaScrollView>
   )
 }

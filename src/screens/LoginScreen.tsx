@@ -74,6 +74,7 @@ const LoginScreen: React.FC = () => {
       <CustomHeading title="Login" />
       <View style={styles.inputContainer}>
         <Input
+          testID="email"
           value={inputs.email}
           onChangeText={(text) => handleOnChange(text, "email")}
           onFocus={() => handleError(null, "email")}
@@ -82,6 +83,7 @@ const LoginScreen: React.FC = () => {
           error={errors.email}
         />
         <Input
+          testID="password"
           value={inputs.password}
           onChangeText={(text) => handleOnChange(text, "password")}
           onFocus={() => handleError(null, "password")}
