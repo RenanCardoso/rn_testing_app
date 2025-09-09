@@ -1,10 +1,10 @@
 name: PR Check
 
 on:
-  pull_request:
+  push:
     branches:
       - master
-      
+
 jobs:
   quality:
     runs-on: ubuntu-latest
