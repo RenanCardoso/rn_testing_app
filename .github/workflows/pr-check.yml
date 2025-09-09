@@ -1,8 +1,9 @@
 name: PR Check
 
 on:
-  pull_request:
-    branches: [master]
+  push:
+    branches:
+      - master
 
 jobs:
   quality:
@@ -13,16 +14,11 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version-file: ".nvmrc"
-          cache: "yarn"
       - name: Install deps
-        run: yarn install --frozen-lockfile
+        run: npm ci
       - name: Lint
-        run: yarn lint
+        run: npm run lint
       - name: Type-check
-        run: yarn type-check
+        run: npm run type-check
       - name: Test
-        run: yarn test --ci --coverage
-      # - name: Upload coverage
-      #   uses: codecov/codecov-action@v4
-      #   with:
-      #     token: ${{ secrets.CODECOV_TOKEN }}
+        run: npm run test --ci --coverage
