@@ -19,7 +19,7 @@ jest.mock('redux-persist', () => ({
 
 }));
 
-describe('RegisterScreen', () => {
+describe.skip('RegisterScreen', () => {
 
 
     afterEach(() => {

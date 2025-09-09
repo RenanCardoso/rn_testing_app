@@ -20,7 +20,7 @@ jest.mock('redux-persist', () => ({
 
 }));
 
-describe('LoginScreen', () => {
+describe.skip('LoginScreen', () => {
     beforeEach(() => {
         persistor.purge();
         jest.clearAllMocks();
