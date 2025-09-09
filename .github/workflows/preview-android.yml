@@ -4,7 +4,7 @@ on:
   workflow_run:
     workflows: ["PR Check"]
     types: [completed]
-    branches-ignore: [master]
+    # branches-ignore: [master]
 
 jobs:
   build-preview:
