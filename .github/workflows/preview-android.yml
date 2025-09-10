@@ -16,6 +16,9 @@ jobs:
           node-version-file: ".nvmrc"
           cache: "yarn"
       - run: yarn install --frozen-lockfile
+      - name: Setup google-services.json
+        run: |
+          echo "${{ secrets.GOOGLE_SERVICES_JSON_ANDROID }}" > android/app/google-services.json
       - name: Build APK
         run: |
           cd android
